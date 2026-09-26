@@ -1,0 +1,33 @@
+=== Heap Sort on Patient Severity Scores ===
+
+Initial array: [45, 72, 30, 90, 65, 50, 85]
+
+--- Phase 1: Build Max Heap ---
+Heapify subtree at index 2
+   heapify swap: index 2 <-> index 6 -> state: [45, 72, 85, 90, 65, 50, 30]
+Heapify subtree at index 1
+   heapify swap: index 1 <-> index 3 -> state: [45, 90, 85, 72, 65, 50, 30]
+Heapify subtree at index 0
+   heapify swap: index 0 <-> index 1 -> state: [90, 45, 85, 72, 65, 50, 30]
+   heapify swap: index 1 <-> index 3 -> state: [90, 72, 85, 45, 65, 50, 30]
+Heap built: [90, 72, 85, 45, 65, 50, 30]
+
+--- Phase 2: Extract elements one by one ---
+Step: move root 90 to sorted position 6 -> state: [30, 72, 85, 45, 65, 50, 90]
+   heapify swap: index 0 <-> index 2 -> state: [85, 72, 30, 45, 65, 50]
+   heapify swap: index 2 <-> index 5 -> state: [85, 72, 50, 45, 65, 30]
+Step: move root 85 to sorted position 5 -> state: [30, 72, 50, 45, 65, 85, 90]
+   heapify swap: index 0 <-> index 1 -> state: [72, 30, 50, 45, 65]
+   heapify swap: index 1 <-> index 4 -> state: [72, 65, 50, 45, 30]
+Step: move root 72 to sorted position 4 -> state: [30, 65, 50, 45, 72, 85, 90]
+   heapify swap: index 0 <-> index 1 -> state: [65, 30, 50, 45]
+   heapify swap: index 1 <-> index 3 -> state: [65, 45, 50, 30]
+Step: move root 65 to sorted position 3 -> state: [30, 45, 50, 65, 72, 85, 90]
+   heapify swap: index 0 <-> index 2 -> state: [50, 45, 30]
+Step: move root 50 to sorted position 2 -> state: [30, 45, 50, 65, 72, 85, 90]
+   heapify swap: index 0 <-> index 1 -> state: [45, 30]
+Step: move root 45 to sorted position 1 -> state: [30, 45, 50, 65, 72, 85, 90]
+
+Final sorted array (ascending) : state: [30, 45, 50, 65, 72, 85, 90]
+Total comparisons               : 21
+Total swaps                     : 18

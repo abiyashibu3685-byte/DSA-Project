@@ -1,0 +1,2 @@
+Patient Severity Scores (input to all three programs)
+45, 72, 30, 90, 65, 50, 85

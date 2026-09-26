@@ -1,0 +1,24 @@
+=== Quick Sort on Patient Severity Scores ===
+
+Initial array: [45, 72, 30, 90, 65, 50, 85]
+
+QuickSort(low=0, high=6)
+   pivot = 85 (index 6)
+   partitioned -> state: [45, 72, 30, 65, 50, 85, 90]
+   pivot 85 fixed at index 5
+QuickSort(low=0, high=4)
+   pivot = 50 (index 4)
+   partitioned -> state: [45, 30, 50, 65, 72]
+   pivot 50 fixed at index 2
+QuickSort(low=0, high=1)
+   pivot = 30 (index 1)
+   partitioned -> state: [30, 45]
+   pivot 30 fixed at index 0
+QuickSort(low=3, high=4)
+   pivot = 72 (index 4)
+   partitioned -> state: [65, 72]
+   pivot 72 fixed at index 4
+
+Final sorted array (ascending) : state: [30, 45, 50, 65, 72, 85, 90]
+Total comparisons               : 12
+Total swaps                     : 12

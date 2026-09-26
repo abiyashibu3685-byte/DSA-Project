@@ -1,0 +1,32 @@
+=== Hospital Priority Queue: Max Heap Insertion ===
+
+Step 1 - Insert severity score 45
+Heap array : [45]
+
+Step 2 - Insert severity score 72
+   swap: index 1 <-> index 0
+Heap array : [72, 45]
+
+Step 3 - Insert severity score 30
+Heap array : [72, 45, 30]
+
+Step 4 - Insert severity score 90
+   swap: index 3 <-> index 1
+   swap: index 1 <-> index 0
+Heap array : [90, 72, 30, 45]
+
+Step 5 - Insert severity score 65
+Heap array : [90, 72, 30, 45, 65]
+
+Step 6 - Insert severity score 50
+   swap: index 5 <-> index 2
+Heap array : [90, 72, 50, 45, 65, 30]
+
+Step 7 - Insert severity score 85
+   swap: index 6 <-> index 2
+Heap array : [90, 72, 85, 45, 65, 30, 50]
+
+Final Max Heap        : Heap array : [90, 72, 85, 45, 65, 30, 50]
+Heap size              : 7
+Heap height            : 2
+Highest priority patient (root of heap) = 90
